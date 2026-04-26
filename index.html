@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interdimensional Item Shop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=BJCree:wght@400;500;600;700&family=Noto+Sans+Egyptian+Hieroglyphs&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/standard-galactic-alphabet-hand" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/naboo-af-aurebesh" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/nostromo" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/andarion" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/futurama" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/alien" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/stray" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
+    <style>
+.secnav{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+.secnav a{
+    color: black;
+    text-decoration: none;
+    padding: 12px;
+    border-bottom: 4px white solid;
+}
+.secnav a:hover{
+    border-bottom: 4px black solid;
+}
+.titlecard{
+  background-image:url('https://cdn.eso.org/images/wallpaper4/eso0932a.jpg');
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.titlecard h1{
+  font-family: "BJCree", sans-serif;
+  font-size: 70px;
+  color: white;
+}
+h1{
+  font-family: "BJCree", sans-serif;
+}
+h2,
+h3,
+a{
+  font-family: "Anonymous Pro", sans-serif;
+}
+.tiis{
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.greetingbottom,
+.greetingtop{
+  display: flex;
+  justify-content: center;
+}
+.greetingtop h2,
+.greetingbottom h2{
+  color: white;
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: 20px;
+}
+.egypt{
+  font-family: "Noto Sans Egyptian Hieroglyphs", sans-serif;
+}
+.alien{
+  font-family: "BJCree", sans-serif;
+}
+.gala{                                                        
+  font-family: 'Standard Galactic Alphabet Hand', sans-serif;    
+}
+.sw{
+  font-family: 'Naboo AF Aurebesh', sans-serif;
+}
+.nostromo{
+  font-family: 'Nostromo', sans-serif;
+}
+.andar{
+  font-family: 'Andarion', sans-serif;
+}
+.future{
+  font-family: 'Futurama Alien Alphabet One', sans-serif;
+}
+.stray{
+  font-family: 'Stray', sans-serif;
+}
+.weaponshead,
+.foodhead,
+.devicehead,
+.vehicleshead,
+.checkouthead{
+  text-align: center;
+}
+.weaponshead h1,
+.foodhead h1,
+.devicehead h1,
+.vehicleshead h1,
+.checkouthead h1{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 70px;
+}
+.weapons1,
+.weapons2{
+  display: flex;
+  align-items: center;
+}
+.weapons2{
+  margin-top: 30px;
+}
+.gauntlet,
+.lightsaber,
+.sword,
+.omnitrix,
+.foodcards,
+.sonycard,
+.xboxcard,
+.sonyxbox,
+.vehiclecards{
+  display: flex;
+}
+.lightsaber{
+  margin-right: 30px;
+}
+.sword{
+  margin-left: 30px;
+}
+.gauntlet{
+  width: 100%;
+}
+.gauntletpic,
+.omnitrixpic{
+  width: 400px;
+  height: 400px;
+  margin-left: auto;
+}
+.lightsaberpic,
+.swordpic{
+  width: 120px;
+}
+.lightsaberdesc,
+.omnitrixdesc{
+  width: 600px;
+}
+.omnitrixdesc{
+  margin-left: 40px
+}
+.mjolnir,
+.iphone{
+  text-align: center;
+  margin-top: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.mjolnirpic{
+  height: 200px;
+}
+.foodcards,
+.sonyxbox,
+.sonycard,
+.xboxcard,
+.vehiclecards{
+  margin-top: 40px;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.card{
+  border-style: solid;
+  border-radius: 16px;
+  border-color: black;
+  border-width: 3px;
+  padding: 15px 15px 15px 15px;
+  align-items: center;
+  width: 350px;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+.card h2{
+  flex-grow: 1;
+}
+.cardpic{
+  width: 320px;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+.iphonepic{
+  width: 300px;
+}
+.sony,
+.xbox{
+  text-align: center;
+}
+.foodcards h2,
+.sonyxbox h2,
+.iphone h2,
+.vehiclecards h2{
+  font-size: 20px;
+}
+.cart-container {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+#total {
+  font-size: 50px;
+  font-family: "BJCree", sans-serif;
+  font-weight: bold;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+input,
+.checkoutbutton{ 
+  width: 500px;
+  padding: 8px;
+  font-size: 16px;
+  font-family: "Anonymous Pro", sans-serif;
+}
+#cart p{
+  font-family: "Anonymous Pro", sans-serif;
+  font-size: 30px;
+}
+:placeholder-shown{
+  font-family: "Anonymous Pro", sans-serif;
+}
+    </style>
+</head>
+<body>
+
+    <nav class="secnav">
+<a href="index.html">Home</a>
+<a href="AboutTheCompany.html">About the Company</a>
+    </nav>
+
+
+<div class="titlecard">
+  
+  <div class="greetingtop">
+    <h2 class="egypt">𓈖𓆓 𓊽𓉐𓉐 𓈖𓏲𓇯</h2>
+    <h2 class="alien">ᓂᓯᑕᐎᓂᒋ</h2>
+    <h2 class="alien">▚▞ ▟▛ ██ ▞▚</h2>
+    <h2>.... . .-.. .-.. ---</h2>
+    <h2 class="gala">Hello</h2>
+    <h2>Ellohay</h2>
+    <h2 class="sw">Hello</h2>
+    <h2 class="nostromo">Regards</h2>
+    <h2 class="andar">Greetings</h2>
+    <h2 class="future">Welcome</h2>
+    <h2 class="stray">Hello</h2>
+  </div>
+  
+<h1 class="tiis">THE INTERDIMENSIONAL ITEM SHOP</h1>
+  
+  <div class="greetingbottom">
+    <h2>こんにちは</h2>
+    <h2>Hello</h2>
+    <h2>你好</h2>
+    <h2>नमस्ते</h2>
+    <h2>Bonjour</h2>
+    <h2>Hola</h2>
+    <h2>مرحبًا</h2>
+    <h2>Kamusta</h2>
+    <h2>привет</h2>
+    <h2>Olá</h2>
+    <h2>Xin chào</h2>
+    <h2>안녕하세요</h2>
+    <h2>Γειά σου</h2>
+    <h2>สวัสดี</h2>
+  </div>
+  
+</div>
+
+<div class="shop">
+  
+  <div class="weapons">
+    
+    <div class="weaponshead">
+      <h1>WEAPONS</h1>
+      <h2>Built to destroy.</h2>
+    </div>
+    <div class="weapons1">
+    
+    <div class="lightsaber">
+      <img src="https://raw.githubusercontent.com/nfgalang/shoppingsitepics/refs/heads/main/weapons%20(1).png" alt="lightsaber" class="lightsaberpic">
+      <div class="lightsaberdesc">
+        <h1><i class="fa-solid fa-arrow-left"></i> LIGHTSABER</h1>
+        <h2>An elegant weapon, for a more civilized age. Traditionally wielded by the Jedi and Sith alike in the Star Wars dimension, this lightsaber can cut through almost any material with relative ease. Powered by a kyber crystal, it's color can be customized to your own specfications. Also a good subsitute for a knife.</h2>
+        <h2>Price: ₱ 1,000,000</h2>
+        <button type="button" class="btn btn-primary btn-lg" onclick="addToCart('Lightsaber', 1000000)"><i class="fa-solid fa-cart-plus"></i> Add to Cart </button>
+      </div>
+    </div>
+    
+<div class="gauntlet">
+  
+  <div class="gauntletdesc">
+  <h1>INFINITY GAUNTLET <i class="fa-solid fa-arrow-right"></i></h1>
+  <h2>Taken from the Marvel dimension, this includes all six infinity stones, namely the Space, Mind, Reality, Power, Time, and Soul stones. With only a simple snap of the fingers, you can remove half of all life in the universe. Perfect for ending world hunger.</h2>
+  <h2>Price: ₱ 3,000,000</h2>
+  <button type="button" class="btn btn-primary btn-lg" onclick="addToCart('Infinity Gauntlet', 3000000)"><i class="fa-solid fa-cart-plus"></i> Add to Cart </button>
+  </div>
+  <img src="https://raw.githubusercontent.com/nfgalang/shoppingsitepics/refs/heads/main/weapons.png" alt="infinity gauntlet" class="gauntletpic">
+</div>
+  
+  </div>
+  
+        <div class="weapons2">
+          
+          <div class="omnitrix">
+  
+  <div class="omnitrixdesc">
+  <h1>OMNITRIX <i class="fa-solid fa-arrow-right"></i></h1>
+  <h2>This is from the Ben 10 dimension, and it can be fashioned upon your wrist. It is a library of genetic data, containing dozens of alien species. It can alter the users data, and change the DNA of the user to transform into these species.</h2>
+  <h2>Price: ₱ 500,000</h2>
+  <button type="button" class="btn btn-primary btn-lg" onclick="addToCart('Omnitrix', 500000)"><i class="fa-solid fa-cart-plus"></i> Add to Cart </button>
+  </div>
+  <img src="https://raw.githubusercontent.com/nfgalang/shoppingsitepics/refs/heads/main/weapons%20(3).png" alt="omnitrix" class="omnitrixpic">
+</div>
+    
+    <div class="sword">
+      <img src="https://raw.githubusercontent.com/nfgalang/shoppingsitepics/refs/heads/main/weapons%20(2).png" alt="sword" class="swordpic">
+      <div class="sworddesc">
+        <h1><i class="fa-solid fa-arrow-left"></i> SWORD</h1>
+        <h2>Present in many dimensions, the 'sword' is a sharpened piece of metal, traditionally with a grip to hold and a guard above the grip. Usually created by a blacksmith, the sword can slice through enemies easily, though it may need repairs. Much cheaper than a lightsaber.</h2>
+        <h2>Price: ₱ 5,000</h2>
+        <button type="button" class="btn btn-primary btn-lg" onclick="addToCart('Sword', 5000)"><i class="fa-solid fa-cart-plus"></i> Add to Cart </button>
+      </div>
+    </div>
+  
+  </div>
+    
+    <div class="mjolnir">
+      <h1>MJOLNIR</h1>
+      <h2>An enchanted hammer wielded by the Norse God of thunder, Thor. It can smash through mountains, return to the user and is only liftable by the worthy. Note: Interdimensional Item Shop (IIS) is not liable for buyers unworthy of Mjolnir.</h2>
+      <h2>Price: ₱ 1,500,000</h2>
+        <button type="button" class="btn btn-primary btn-lg" onclick="addToCart('Mjolnir', 1500000)"><i class="fa-solid fa-cart-plus"></i> Add to Cart </button>
+      <img src="https://raw.githubusercontent.com/nfgalang/shoppingsitepics/refs/heads/main/weapons%20(4).png" alt="mjolnir" class="mjolnirpic">
+    </div>
+    
+    
+</div>
+  
+  <hr>
+  
+  <div class="food">
+    
+    <div class="foodhead">
+      <h1>FOOD</h1>
+      <h2>May or may not be edible.</h2>
+    </div>
+    
+    <div class="foodcards">
+      
+      <div class="card">
+        <h1>Dihydrogen Monoxide</h1>
+        <img src="https://raw.githubusercontent.com/nfgalang/shoppingsitepics/refs/heads/main/food.png" alt="water" class="cardpic">
+        <h2>A common sight in many dimensions, and is essential for most life.</h2>
+        <h2>Price: ₱ 5</h2>
+        <button type="button" class="btn btn-primary btn-lg" onclick="addToCart('Dihydrogen Monoxide', 5)"><i class="fa-solid fa-cart-plus"></i> Add to Cart </button>
+      </div>
+      
+       <div class="card">
+        <h1>Frozen Dihydrogen Monoxide</h1>
+        <img src="https://raw.githubusercontent.com/nfgalang/shoppingsitepics/refs/heads/main/food%20(1).png" alt="ice" class="cardpic">
+        <h2>The frozen form of Dihydrogen Monoxide. Cold.</h2>
+        <h2>Price: ₱ 5</h2>
+        <button type="button" class="btn btn-primary btn-lg" onclick="addToCart('Frozen Dihydrogen Monoxide', 5)"><i class="fa-solid fa-cart-plus"></i> Add to Cart </button>
+      </div>
+      
+       <div class="card">
+        <h1>Alien Jollibee Fried Chicken</h1>
+        <img src="https://raw.githubusercontent.com/nfgalang/shoppingsitepics/refs/heads/main/food%20(2).png" alt="jolibee chicken" class="cardpic">
+        <h2>The exotic Jollibee Chicken, present in over 200 planets. Cannot be eaten by humans.</h2>
+        <h2>Price: ₱ 100</h2>
+        <button type="button" class="btn btn-primary btn-lg" onclick="addToCart('Alien Jollibee Fried Chicken', 100)"><i class="fa-solid fa-cart-plus"></i> Add to Cart </button>
+      </div>
+      
+            <div class="card">
+        <h1>Silica Gel Packet</h1>
+        <img src="https://raw.githubusercontent.com/nfgalang/shoppingsitepics/refs/heads/main/food%20(3).png" alt="silica gel packet" class="cardpic">
+        <h2>Trust us, it's edible.</h2>
+        <h2>Price: ₱ 50</h2>
+        <button type="button" class="btn btn-primary btn-lg" onclick="addToCart('Silica Gel Packet', 50)"><i class="fa-solid fa-cart-plus"></i> Add to Cart </button>
+      </div>
+      
+            <div class="card">
+        <h1>Uranium Ore</h1>
+        <img src="https://raw.githubusercontent.com/nfgalang/shoppingsitepics/refs/heads/main/food%20(4).png" alt="uranium ore" class="cardpic">
+        <h2>Is this even food?</h2>
+        <h2>Price: ₱ 6,000</h2>
+        <button type="button" class="btn btn-primary btn-lg" onclick="addToCart('Uranium Ore', 6000)"><i class="fa-solid fa-cart-plus"></i> Add to Cart </button>
+      </div>
+      
+    </div>
+    
+  </div>
+  
+  <hr>
+  
+  
+  <div class="devices">
+    <div class="devicehead">
+      <h1>ELECTRONIC DEVICES</h1>
+      <h2>Only for more advanced dimensions.</h2>
+    </div>
+  
+  <div class="iphone">
+    <h1>IPhone 1000</h1>
+    <img src="https://raw.githubusercontent.com/nfgalang/shoppingsitepics/refs/heads/main/device.png" alt="iphone" class="iphonepic">
+    <h2>The pinnacle of electronic devices. Contains propellers, wheels, a rotary dial, an antenna, 10 cameras, googly eyes, a handle and most importantly: a cupholder.</h2>
+    <h2>Price: ₱ 300,000</h2>
+    <button type="button" class="btn btn-primary btn-lg" onclick="addToCart('IPhone 1000', 300000)"><i class="fa-solid fa-cart-plus"></i> Add to Cart </button>
+  </div>
+  
+  <div class="sonyxbox">
+    
+    <div class="sony">
+      
+      <h1>SONY PRODUCTS</h1>
+      
+      <div class="sonycard">
+      
+      <div class="card">
+        <h1>Playstation 6</h1>
+        <img src="https://raw.githubusercontent.com/nfgalang/shoppingsitepics/refs/heads/main/device%20(2).png" alt="ps6" class="cardpic">
+        <h2>The new showrunner of Sony, the PS6 has been a staple gaming console in many dimensions. It can now run the newest interdimensional releases, like Lord of Peace and Loud Mountain.</h2>
+        <h2>Price: ₱ 50,000</h2>
+        <button type="button" class="btn btn-primary btn-lg" onclick="addToCart('Playstation 6', 50000)"><i class="fa-solid fa-cart-plus"></i> Add to Cart </button>
+      </div>
+      
+      <div class="card">
+        <h1>Oculus Pro Max Ultimate</h1>
+        <img src="https://raw.githubusercontent.com/nfgalang/shoppingsitepics/refs/heads/main/device%20(3).png" alt="headset" class="cardpic">
+        <h2>Packed with a suite of electronic sensors, the Oculus PMU is used by both civillians for gaming and military for training. It offers unlimited immersion for all buyers across dimensions.</h2>
+        <h2>Price: ₱ 70,000</h2>
+        <button type="button" class="btn btn-primary btn-lg" onclick="addToCart('Oculus Pro Max Ultimate', 70000)"><i class="fa-solid fa-cart-plus"></i> Add to Cart </button>
+      </div>
+        
+    </div>
+    
+    </div>
+    
+        <div class="xbox">
+      
+      <h1>XBOX PRODUCTS</h1>
+      
+      <div class="xboxcard">
+      
+                  <div class="card">
+        <h1>Xbox 720 Platinum</h1>
+        <img src="https://raw.githubusercontent.com/nfgalang/shoppingsitepics/refs/heads/main/device%20(1).png" alt="xbox720" class="cardpic">
+        <h2>Xbox's response to the PS6. Though less advanced, it is substantially cheaper while offering a similar experience. It contains exclusive games like Helo Finite and Megasoft Flight Simulator.</h2>
+        <h2>Price: ₱ 40,000</h2>
+        <button type="button" class="btn btn-primary btn-lg" onclick="addToCart('Xbox 720 Platinum', 40000)"><i class="fa-solid fa-cart-plus"></i> Add to Cart </button>
+      </div>
+        
+       <div class="card">
+        <h1>Xbox Xtreme Xtra</h1>
+        <img src="https://raw.githubusercontent.com/nfgalang/shoppingsitepics/refs/heads/main/device%20(4).png" alt="xboxxtreme" class="cardpic">
+        <h2>Very Xtreme, very Xtra. Undoutably the "X"est console.</h2>
+        <h2>Price: ₱ 100,000</h2>
+        <button type="button" class="btn btn-primary btn-lg" onclick="addToCart('Xbox Xtreme Xtra', 100000)"><i class="fa-solid fa-cart-plus"></i> Add to Cart </button>
+      </div>
+      
+    </div>
+    
+    </div>
+    
+  </div>
+  
+  </div>
+  
+  <hr>
+  
+  <div class="vehicles">
+    
+    <div class="vehicleshead">
+      <h1>VEHICLES</h1>
+      <h2>For moving around quicker.</h2>
+    </div>
+    
+  <div class="vehiclecards">
+      
+      <div class="card">
+        <h1>Death Star</h1>
+        <img src="https://raw.githubusercontent.com/nfgalang/shoppingsitepics/refs/heads/main/vehicles.png" alt="death star" class="cardpic">
+        <h2>Created by the Galactic Empire in the Star Wars dimension, this superweapon can destroy a planet with one shot from it's superlaser. It also has a Class 4 hyperdrive, allowing lightspeed travel.</h2>
+        <h2>Price: ₱ 5,000,000,000</h2>
+        <button type="button" class="btn btn-primary btn-lg" onclick="addToCart('Death Star', 5000000000)"><i class="fa-solid fa-cart-plus"></i> Add to Cart </button>
+      </div>
+      
+       <div class="card">
+        <h1>Helicarrier</h1>
+        <img src="https://raw.githubusercontent.com/nfgalang/shoppingsitepics/refs/heads/main/vehicles%20(1).png" alt="helicarrier" class="cardpic">
+        <h2>Taken from the Marvel dimension, the original Helicarrier was operated by SHIELD, and used as a command center and reconaissance platform. It has weapons such as ICBMs, cannons and drones for defense.</h2>
+        <h2>Price: ₱ 1,000,000,000</h2>
+        <button type="button" class="btn btn-primary btn-lg" onclick="addToCart('Helicarrier', 1000000000)"><i class="fa-solid fa-cart-plus"></i> Add to Cart </button>
+      </div>
+      
+       <div class="card">
+        <h1>Unidentified Flying Object</h1>
+        <img src="https://raw.githubusercontent.com/nfgalang/shoppingsitepics/refs/heads/main/vehicles%20(2).png" alt="ufo" class="cardpic">
+        <h2>The absolute classic of all alien spacecraft. It can be piloted by up to 5 people and has a tractor beam to pull up subjects for study. It also has a cloaking mechanism to prevent detection. Note: Cloak is prone to failure.</h2>
+        <h2>Price: ₱ 1,000,000</h2>
+        <button type="button" class="btn btn-primary btn-lg" onclick="addToCart('UFO', 1000000)"><i class="fa-solid fa-cart-plus"></i> Add to Cart </button>
+      </div>
+      
+            <div class="card">
+        <h1>SR-71 Blackbird</h1>
+        <img src="https://raw.githubusercontent.com/nfgalang/shoppingsitepics/refs/heads/main/vehicles%20(3).png" alt="sr71 blackbird" class="cardpic">
+        <h2>A rare sight for aviation fans. Usually, it is used by the US military for reconaissance. Travelling at thrice the speed of sound, it outran most Soviet defenses in the cold war. Now it is obsolete, but it is still a collector's item.</h2>
+        <h2>Price: ₱ 500,000,000</h2>
+        <button type="button" class="btn btn-primary btn-lg" onclick="addToCart('SR-71 Blackbird', 500000000)"><i class="fa-solid fa-cart-plus"></i> Add to Cart </button>
+      </div>
+      
+            <div class="card">
+        <h1>USS Enterprise</h1>
+        <img src="https://raw.githubusercontent.com/nfgalang/shoppingsitepics/refs/heads/main/vehicles%20(4).png" alt="uss enterprise" class="cardpic">
+        <h2>The classic ship of James T. Kirk in the Star Trek dimension. Designated as the NCC-1701, the classic Enterprise is a timeless design worth a lot to many collectors. It is armed with phasers and photon torpedoes.</h2>
+        <h2>Price: ₱ 750,000,000</h2>
+        <button type="button" class="btn btn-primary btn-lg" onclick="addToCart('USS Enterprise', 750000000)"><i class="fa-solid fa-cart-plus"></i> Add to Cart </button>
+      </div>
+      
+    </div>
+    
+    
+    
+  </div>
+  
+  
+  
+  </div>
+
+<hr>
+
+    <div class="checkouthead">
+      <h1>CHECKOUT</h1>
+      <h2>Thank you for shopping at the Interdimensional Item Shop.</h2>
+      <p id="total"></p>
+    </div>
+<div class="checkoutall">
+<div class="cart cart-container">
+<div id="cart"></div>
+</div>
+<form action="http://52.74.133.173/cs3/checkout.php" method="POST" onsubmit="checkOut()">
+<input type="text" name="cust_name" placeholder="Name" required>
+<input type="text" name="cust_addr" placeholder="Address" required>
+<input type="email" name="cust_email" placeholder="Email">
+<input type="hidden" name="cust_order" id="cust_order">
+  <button type="submit" class="checkoutbutton">Checkout</button>
+</form>
+</div>
+
+<script>
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+function addToCart(name,price) {
+  cart.push({
+    prod_name: name,
+    prod_price: price,
+  }); 
+  localStorage.setItem("cart", JSON.stringify(cart));
+  displayCart();
+}
+
+function displayCart() {
+  let cartDisp = document.getElementById("cart");
+  cartDisp.innerHTML = "";
+  let totalprice = 0;
+  
+  for (let index = 0; index < cart.length; index++) {
+  let item = cart[index];
+  totalprice += item.prod_price;
+
+  cartDisp.innerHTML += "<p>" +item.prod_name+ " - ₱" + item.prod_price+  " <button onclick='removeItem("+ index+ ")'>Remove</button></p>";
+}
+  document.getElementById("total").innerText = "Total: ₱" + totalprice;
+}
+
+function removeItem(index) {
+  cart.splice(index, 1);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  displayCart();
+}
+
+function checkOut() {
+  document.getElementById("cust_order").value = JSON.stringify(cart);
+  
+}
+displayCart();
+</script>
+</body>
+</html>
